@@ -1,0 +1,14 @@
+button .carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #FDCEDF;
+}
+
+
+main{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color:#F8E8EE;
+}
+
+svg{
+    color: #f5c518;
+}

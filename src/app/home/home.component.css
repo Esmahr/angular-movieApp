@@ -1,0 +1,27 @@
+main{
+    background-color: #F8E8EE;
+}
+
+.container main {
+    padding-top: 5rem;
+}
+
+.col-md-3 .section{
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-color: #F2BED1;
+    margin-bottom: 1rem;
+}
+
+.col-md-3 .section img{
+    border-radius: 2rem;
+}
+
+.col-md-3 #genres{
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+hr{
+    color: #e7334b;
+}

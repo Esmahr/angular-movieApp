@@ -1,0 +1,42 @@
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg pe-2 ps-2 pt-0">
+        <div class="collapse navbar-collapse justify-content-start">
+            <a class="navbar-brand" href="#">Esma Harmancı</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav mt-3">
+                <li class="nav-item center">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-1 rounded-start-pill" type="search text" placeholder="Film Ara"
+                            aria-label="Search">
+                        <button class="btn rounded-end-pill" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="22" height="22" fill="currentColor" class="bi bi-search-heart"
+                                viewBox="0 0 16 16">
+                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+                                <path
+                                    d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
+                            </svg></button>
+                    </form>
+                </li>
+                <li class="nav-item dropdown border rounded-pill">
+                    <button class="dropdown-toggle nav-link" type="button" id="dropdownMenuButton"
+                        [class.show]="isDropdownOpen" (click)="toggleDropdown()">
+                        Türler
+                    </button>
+                    <div class="dropdown-menu" [class.show]="isDropdownOpen" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" *ngFor="let genre of genres" (click)="selectGenre(genre)">{{ genre
+                            }}</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" style="vertical-align: middle;">
+            <a class="navbar-brand" href="#">İzleme Listesi</a>
+        </div>
+    </nav>
+</div>
