@@ -23,6 +23,6 @@ import { MovieApiService } from './movie-api.service'
     HttpClientModule
   ],
   providers: [MovieApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,SliderComponent,HomeComponent]
 })
 export class AppModule { }

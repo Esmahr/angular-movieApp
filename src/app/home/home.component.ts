@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieApiService } from '../movie-api.service'
+import { MovieApiService } from '../movie-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,11 @@ export class HomeComponent implements OnInit {
 
   mostMoviesDisplay: any[] = []
   genreMoviesDisplay: any[] = []
+  upcomingMoviesDisplay: any[] = []
+
+
+
+
   sliderTransform: number = 0;
 
   constructor(private _service: MovieApiService) { }
@@ -18,6 +24,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getmostMoviesDisplay();
     this.getgenreMoviesDisplay();
+    this.getupcomingMoviesDisplay();
   }
 
   getmostMoviesDisplay() {
@@ -26,9 +33,15 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  getgenreMoviesDisplay(){
+  getgenreMoviesDisplay() {
     this._service.genreMovies().subscribe((data: any) => {
       console.log(data); this.genreMoviesDisplay = data.genres.slice(0, 18);
+    });
+  }
+
+  getupcomingMoviesDisplay() {
+    this._service.upcomingMovies().subscribe((data: any) => {
+      console.log(data); this.upcomingMoviesDisplay = data.results.slice(0,8);
     });
   }
 }

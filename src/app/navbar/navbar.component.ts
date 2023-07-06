@@ -19,5 +19,4 @@ export class NavbarComponent {
     this.toggleDropdown();
   }
 
-
 }

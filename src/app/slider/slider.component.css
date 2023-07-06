@@ -10,8 +10,10 @@ main {
     background-color: #F8E8EE;
 }
 
-svg {
-    color: #f5c518;
+svg{
+    margin-right: .5rem;
+    margin-bottom: .3rem;
+    margin-top: .3rem;
 }
 
 .card {
@@ -23,4 +25,8 @@ svg {
 
 .card-body .card-text{
     margin-bottom: 0;
+}
+
+.card-body{
+    padding: 0;
 }

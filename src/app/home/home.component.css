@@ -22,6 +22,27 @@ main{
     margin-bottom: 5rem;
 }
 
+.card {
+    height: 350px;
+    max-height: 350px;
+    background-color: #F9F5F6;
+    border-color: #efb0c7;
+}
+
+.card-body{
+    padding-right: 0;
+}
+
 hr{
     color: #e7334b;
+}
+
+svg{
+    margin-right: .5rem;
+    margin-bottom: .3rem;
+    margin-top: .3rem;
+}
+
+h3{
+    margin-bottom: 2rem;
 }

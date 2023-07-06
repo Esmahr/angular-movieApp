@@ -26,4 +26,16 @@ export class MovieApiService {
   genreMovies(): Observable<any> {
     return this.http.get(this.genreApiUrl)
   }
+
+  upcomingApiUrl = "https://api.themoviedb.org/3/movie/upcoming?language=tr&api_key=f86778ad848bc5db81f8a27d73a1532b"
+
+  upcomingMovies(): Observable<any> {
+    return this.http.get(this.upcomingApiUrl)
+  }
+
+  comedyApiUrl = ""
+  animationApiUrl = ""
+  horrorApiUrl = ""
+  actionApiUrl = ""
+
 }
