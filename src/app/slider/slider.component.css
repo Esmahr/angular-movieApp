@@ -1,14 +1,26 @@
-button .carousel-control-prev-icon, .carousel-control-next-icon{
-    background-color: #FDCEDF;
+button .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #F2BED1;
 }
 
 
-main{
+main {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color:#F8E8EE;
+    background-color: #F8E8EE;
 }
 
-svg{
+svg {
     color: #f5c518;
+}
+
+.card {
+    height: 350px;
+    max-height: 350px;
+    background-color: #F9F5F6;
+    border-color: #efb0c7;
+}
+
+.card-body .card-text{
+    margin-bottom: 0;
 }

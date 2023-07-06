@@ -13,39 +13,11 @@
                 <div class="container" id="popular">
                     <h3>Nette İlk</h3>
                     <hr>
-                    <div class="section border border-danger-subtle">
+                    <div class="section border border-danger-subtle" *ngFor="let most of mostMoviesDisplay.slice(0,5)">
                         <div class="row">
-                            <div class="col-md-3 ms-1 mt-1 mb-1"><img src="https://picsum.photos/200/300" height="50"
+                            <div class="col-md-3 ms-1 mt-1 mb-1"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" height="50"
                                     width="50" alt=""></div>
-                            <div class="col-md-8 ps-0">aaaa</div>
-                        </div>
-                    </div>
-                    <div class="section border border-danger-subtle">
-                        <div class="row">
-                            <div class="col-md-3 ms-1 mt-1 mb-1"><img src="https://picsum.photos/200/300" height="50"
-                                    width="50" alt=""></div>
-                            <div class="col-md-8 ps-0">aaaa</div>
-                        </div>
-                    </div>
-                    <div class="section border border-danger-subtle">
-                        <div class="row">
-                            <div class="col-md-3 ms-1 mt-1 mb-1"><img src="https://picsum.photos/200/300" height="50"
-                                    width="50" alt=""></div>
-                            <div class="col-md-8 ps-0">aaaa</div>
-                        </div>
-                    </div>
-                    <div class="section border border-danger-subtle">
-                        <div class="row">
-                            <div class="col-md-3 ms-1 mt-1 mb-1"><img src="https://picsum.photos/200/300" height="50"
-                                    width="50" alt=""></div>
-                            <div class="col-md-8 ps-0">aaaa</div>
-                        </div>
-                    </div>
-                    <div class="section border border-danger-subtle">
-                        <div class="row">
-                            <div class="col-md-3 ms-1 mt-1 mb-1"><img src="https://picsum.photos/200/300" height="50"
-                                    width="50" alt=""></div>
-                            <div class="col-md-8 ps-0">aaaa</div>
+                            <div class="col-md-8 ps-0">{{most.original_title}}</div>
                         </div>
                     </div>
                 </div>
@@ -53,31 +25,8 @@
                     <h3>Türlerine Göre Filmler</h3>
                     <hr>
                     <div class="row">
-                        <div class="col-md-6"> Komedi Filmleri<br>
-                            Korku Filmleri<br>
-                            Macera Filmleri<br>
-                            Müzik Filmleri<br>
-                            Müzik Filmleri<br>
-                            Polisiye Filmleri<br>
-                            Reality Filmleri<br>
-                            Reality-TV Filmleri<br>
-                            Romantik Filmleri<br>
-                            Savaş Filmleri<br>
-                            Short Filmleri<br>
-                            Spor Filmleri<br>
-                            Suç Filmleri</div>
-                        <div class="col-md-6">Adult Filmleri<br>
-                            Aile Filmleri<br>
-                            Aksiyon Filmleri<br>
-                            Belgesel Filmleri<br>
-                            Bilim Kurgu Filmleri<br>
-                            Biyografi Filmleri<br>
-                            Dram Filmleri<br>
-                            Gerilim Filmleri<br>
-                            Gizem Filmleri<br>
-                            Talk-Show Filmleri<br>
-                            Tarih Filmleri
-                            Fantastik Filmleri</div>
+                        <div class="col-md-6"> <div *ngFor="let genre of genreMoviesDisplay.slice(0,9)">{{genre.name}}</div><br></div>
+                        <div class="col-md-6"> <div *ngFor="let genre of genreMoviesDisplay.slice(9,18)">{{genre.name}}</div><br></div>
                     </div>
                 </div>
             </div>
