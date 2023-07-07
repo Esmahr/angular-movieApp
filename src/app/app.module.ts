@@ -7,7 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SliderComponent } from './slider/slider.component';
 import { DetailComponent } from './detail/detail.component';
 import { HomeComponent } from './home/home.component';
-import { MovieApiService } from './movie-api.service'
+import { MovieApiService } from './movie-api.service';
+import { SearchComponent } from './search/search.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MovieApiService } from './movie-api.service'
     NavbarComponent,
     SliderComponent,
     DetailComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,6 @@ import { MovieApiService } from './movie-api.service'
     HttpClientModule
   ],
   providers: [MovieApiService],
-  bootstrap: [AppComponent,SliderComponent,HomeComponent]
+  bootstrap: [AppComponent,SliderComponent,HomeComponent,SearchComponent]
 })
 export class AppModule { }

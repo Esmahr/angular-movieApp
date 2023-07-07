@@ -14,9 +14,6 @@ export class HomeComponent implements OnInit {
   genreMoviesDisplay: any[] = []
   upcomingMoviesDisplay: any[] = []
 
-
-
-
   sliderTransform: number = 0;
 
   constructor(private _service: MovieApiService) { }

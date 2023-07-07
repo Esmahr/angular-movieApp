@@ -1,22 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
-  public genres: string[] = ['Komedi', 'Aksiyon', 'Aile', 'Animasyon', 'Bilim Kurgu', 'Dram', 'Fantastik', 'Korku', 'Macera', 'Müzikal', 'Polisiye', 'Romantik'];
-  public selectedGenre: string | null = null;
-  public isDropdownOpen = false;
+export class NavbarComponent implements OnInit {
 
-  public toggleDropdown(): void {
-    this.isDropdownOpen = !this.isDropdownOpen;
+  constructor() { }
+
+  ngOnInit(): void {
   }
-
-  public selectGenre(genre: string): void {
-    this.selectedGenre = genre;
-    this.toggleDropdown();
-  }
-
 }

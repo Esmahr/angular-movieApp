@@ -1,7 +1,7 @@
 <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg pe-2 ps-2 pt-0">
         <div class="collapse navbar-collapse justify-content-start">
-            <a class="navbar-brand" href="#">Esma Harmancı</a>
+            <a class="navbar-brand" href="#">MovieApp</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -9,34 +9,15 @@
             </button>
         </div>
         <div class="collapse navbar-collapse justify-content-center">
-            <ul class="navbar-nav mt-3">
-                <li class="nav-item center">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-1 rounded-start-pill" type="search text" placeholder="Film Ara"
-                            aria-label="Search">
-                        <button class="btn rounded-end-pill" type="submit"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="22" height="22" fill="currentColor" class="bi bi-search-heart"
-                                viewBox="0 0 16 16">
-                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
-                                <path
-                                    d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z" />
-                            </svg></button>
-                    </form>
-                </li>
-                <li class="nav-item dropdown border rounded-pill">
-                    <button class="dropdown-toggle nav-link" type="button" id="dropdownMenuButton"
-                        [class.show]="isDropdownOpen" (click)="toggleDropdown()">
-                        Türler
-                    </button>
-                    <div class="dropdown-menu" [class.show]="isDropdownOpen" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" *ngFor="let genre of genres" (click)="selectGenre(genre)">{{ genre
-                            }}</a>
-                    </div>
-                </li>
-            </ul>
+            <a class="navbar-brand fs-3" href="/search.component"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search me-2 pb-1" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg><b>Search</b></a>
         </div>
         <div class="collapse navbar-collapse justify-content-end" style="vertical-align: middle;">
-            <a class="navbar-brand" href="#">İzleme Listesi</a>
+            <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bookmark-plus me-2 pb-1" viewBox="0 0 16 16">
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+              </svg><b>Watch List</b></a>
         </div>
     </nav>
 </div>
