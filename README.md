@@ -27,16 +27,16 @@ Uçtan uca testleri istediğiniz bir platform aracılığıyla çalıştırmak i
 Angular CLI hakkında daha fazla yardım almak için `ng help` komutunu kullanabilir veya [Angular CLI Genel Bakış ve Komut Referansı](https://angular.io/cli) sayfasını ziyaret edebilirsiniz.
 
 
-## Projenin ekran görüntüleri
+# Projenin ekran görüntüleri
 
-### Home
+### Home Page
 
 ![](/src/assets/home.png)
 
-### Detail
+### Detail Page
 
 ![](/src/assets/detail.png)
 
-### Search
+### Search Page
 
 ![](/src/assets/search.png)
