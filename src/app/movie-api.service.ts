@@ -33,9 +33,12 @@ export class MovieApiService {
     return this.http.get(this.upcomingApiUrl)
   }
 
-  comedyApiUrl = ""
-  animationApiUrl = ""
-  horrorApiUrl = ""
-  actionApiUrl = ""
+  getDetailsById(movieId: string): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}?language=tr` + `&api_key=f86778ad848bc5db81f8a27d73a1532b`)
+  }
+
+  getReviewById(movieId: string): Observable<any> {
+    return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/reviews` + `&api_key=f86778ad848bc5db81f8a27d73a1532b`)
+  }
 
 }

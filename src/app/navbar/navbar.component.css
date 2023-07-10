@@ -24,3 +24,7 @@ input{
 .dropdown{
     margin-left: 2rem;
 }
+
+.navbar-brand{
+color: whitesmoke;
+}
