@@ -1,0 +1,39 @@
+
+.slider .list-style-none {
+    width: 100% !important;
+    overflow: hidden;
+}
+
+ul.list-style-none {
+    overflow-x: auto;
+    overflow: hidden;
+    width: 1750px;
+    list-style: none;
+}
+
+.list-style-none .col-3 {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.list-style-none .col-3 .img {
+    border-radius: 10px;
+    width: 90%;
+}
+
+.list-style-none .col-3 {
+    animation: moveOne 80s linear infinite;
+    height: 200px;
+}
+
+@keyframes moveOne {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-700px);
+    }
+}

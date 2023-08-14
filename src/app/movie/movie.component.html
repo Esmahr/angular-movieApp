@@ -1,0 +1,61 @@
+<main>
+    <app-slider></app-slider>
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button"
+                    aria-controls="tab1" aria-selected="true">Now Playing</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                    aria-controls="tab2" aria-selected="false">Upcoming</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+                    aria-controls="tab3" aria-selected="false">Top Rated</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link pe-0" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button"
+                    aria-controls="tab4" aria-selected="false">Popular</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                <div class="row">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay.slice(0,12)">
+                        <a href="details/{{most.id}}"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" 
+                            alt="">
+                            <h6>{{most.original_title}}</h6></a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                <div class="row overflow-auto">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let upcoming of upcomingMoviesDisplay.slice(0,12)">
+                        <a href="details/{{upcoming.id}}"><img src="https://image.tmdb.org/t/p/original/{{upcoming.poster_path}}" alt="">
+                            <h6>{{upcoming.original_title}}</h6>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                <div class="row">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay.slice(0,12)">
+                        <a href="details/{{most.id}}"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" 
+                            alt="">
+                            <h6>{{most.original_title}}</h6></a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                <div class="row">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay.slice(0,12)">
+                        <a href="details/{{most.id}}"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" 
+                            alt="">
+                            <h6>{{most.original_title}}</h6></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,55 @@
+main {
+    background-color: #242A32;
+}
+
+main img {
+    border-radius: 1rem;
+}
+
+.container {
+    font-size: 0.855rem;
+    padding-bottom: 5rem;
+}
+
+
+.nav {
+    border: none;
+}
+
+.nav-tabs button {
+    color: #fff;
+    padding-left: 0;
+    margin-right: 1.5rem;
+    padding-right: 0;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+.nav-tabs .nav-link.active {
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid #fff;
+}
+
+
+@media (min-width: 900px) {
+
+    .tab-pane .row .col-4 img {
+        width: 75% !important;
+    }
+
+}
+
+.tab-pane .row .col-4 img {
+    height: 150;
+    width: 100%;
+}
+
+.tab-pane .row .col-4 a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
