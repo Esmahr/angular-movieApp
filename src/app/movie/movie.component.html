@@ -22,7 +22,7 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                 <div class="row">
-                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay.slice(0,12)">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay">
                         <a href="details/{{most.id}}"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" 
                             alt="">
                             <h6>{{most.original_title}}</h6></a>
@@ -31,7 +31,7 @@
             </div>
             <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                 <div class="row overflow-auto">
-                    <div class="col-4 mb-2 mt-4" *ngFor="let upcoming of upcomingMoviesDisplay.slice(0,12)">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let upcoming of upcomingMoviesDisplay">
                         <a href="details/{{upcoming.id}}"><img src="https://image.tmdb.org/t/p/original/{{upcoming.poster_path}}" alt="">
                             <h6>{{upcoming.original_title}}</h6>
                         </a>
@@ -40,7 +40,7 @@
             </div>
             <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                 <div class="row">
-                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay.slice(0,12)">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let most of topMoviesDisplay">
                         <a href="details/{{most.id}}"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" 
                             alt="">
                             <h6>{{most.original_title}}</h6></a>
@@ -49,7 +49,7 @@
             </div>
             <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                 <div class="row">
-                    <div class="col-4 mb-2 mt-4" *ngFor="let most of mostMoviesDisplay.slice(0,12)">
+                    <div class="col-4 mb-2 mt-4" *ngFor="let most of popularMoviesDisplay">
                         <a href="details/{{most.id}}"><img src="https://image.tmdb.org/t/p/original/{{most.poster_path}}" 
                             alt="">
                             <h6>{{most.original_title}}</h6></a>

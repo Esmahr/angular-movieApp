@@ -8,6 +8,7 @@
         <div class="pb-5" *ngIf="searchMovie != null">
             <div class="row mb-4" *ngFor="let movie of searchMovie">
                <div class="col-1"></div>
+               <a href="details/{{movie.id}}" class="d-flex">
                 <div class="col-4"><img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}"></div>
                 <div class="col-7 ps-0">
                     <ul class="list-unstyled ps-0">
@@ -17,7 +18,7 @@
                         <li class="wh"><img src="../../../assets/CalendarBlank.svg">{{movie.release_date}}</li>
                         <li class="wh"><img src="../../../assets/Clock.svg">{{movie.vote_count}} min</li>
                     </ul>
-                </div>
+                </div></a>
             </div>
         </div>
         <div class="newsNotFound" *ngIf="searchMovie.length == 0">

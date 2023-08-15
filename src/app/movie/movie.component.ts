@@ -6,9 +6,11 @@ import { MovieApiService } from '../service/movie-api.service';
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
-export class MovieComponent implements OnInit{
+export class MovieComponent implements OnInit {
   mostMoviesDisplay: any[] = []
   upcomingMoviesDisplay: any[] = []
+  topMoviesDisplay: any[] = []
+  popularMoviesDisplay: any[] = []
 
   sliderTransform: number = 0;
 
@@ -17,16 +19,30 @@ export class MovieComponent implements OnInit{
   ngOnInit() {
     this.getmostMoviesDisplay();
     this.getupcomingMoviesDisplay();
+    this.gettopMoviesDisplay();
+    this.getpopularMoviesDisplay();
   }
   getmostMoviesDisplay() {
     this._service.mostMovies().subscribe((data: any) => {
-      console.log(data); this.mostMoviesDisplay = data.results.slice(0, 12);
+      console.log(data); this.mostMoviesDisplay = data.results;
     });
   }
 
   getupcomingMoviesDisplay() {
     this._service.upcomingMovies().subscribe((data: any) => {
-      console.log(data); this.upcomingMoviesDisplay = data.results.slice(0,12);
+      console.log(data); this.upcomingMoviesDisplay = data.results;
+    });
+  }
+
+  getpopularMoviesDisplay() {
+    this._service.popularMovies().subscribe((data: any) => {
+      console.log(data); this.popularMoviesDisplay = data.results;
+    });
+  }
+
+  gettopMoviesDisplay() {
+    this._service.topMovies().subscribe((data: any) => {
+      console.log(data); this.topMoviesDisplay = data.results;
     });
   }
 

@@ -13,6 +13,7 @@ export class DetailComponent implements OnInit {
   movieId: string = "";
   movie: any;
   reviews: any[] = [];
+  cast: any[] = [];
 
   tabs: string[] = ["About Movie", "Reviews", "Cast"]
   currentTab: string = "About Movie";
@@ -25,6 +26,7 @@ export class DetailComponent implements OnInit {
     this.route.params.subscribe(params => this.movieId = params["id"]);
     this.getDetails(this.movieId);
     this.getReview(this.movieId);
+    this.getCast(this.movieId);
   }
 
   getDetails(id: string) {
@@ -32,9 +34,12 @@ export class DetailComponent implements OnInit {
   }
 
   getReview(id: string) {
-    this.dataService.getReviewById(id).subscribe((data: { results: any[]; }) => { console.log(data); this.reviews = data.results });
+    this.dataService.getReviewsById(id).subscribe((data: { results: any[]; }) => { console.log(data); this.reviews = data.results });
   }
 
+  getCast(id: string) {
+    this.dataService.getCastById(id).subscribe((data: { cast: any[]; }) => { console.log(data); this.cast = data.cast });
+  }
 
   isTabActive(tab: string): boolean {
     return this.currentTab === tab;
@@ -43,5 +48,6 @@ export class DetailComponent implements OnInit {
   setTab(tab: string) {
     this.currentTab = tab;
   }
+
 
 }

@@ -2,8 +2,7 @@
     <ul class="list-style-none d-flex mb-2">
         <li class="col-3" *ngFor="let movie of popularMoviesDisplay.slice(0,10)">
             <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="card-img-top img" alt="...">
-            <div class="card-body">
-                <h6 class="card-text pt-3 ps-2 " style="overflow:hidden;">{{movie.original_title}}</h6>
+            <div class="card-body text-light">
             </div>
         </li>
     </ul>
