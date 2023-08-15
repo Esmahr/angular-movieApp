@@ -35,7 +35,9 @@ Angular CLI hakkında daha fazla yardım almak için `ng help` komutunu kullanab
 
 ### Detail Page
 
-![](/src/assets/detail.png)
+![](/src/assets/detaila.png)
+![](/src/assets/detailr.png)
+![](/src/assets/detailc.png)
 
 ### Search Page
 
