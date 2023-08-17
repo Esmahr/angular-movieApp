@@ -1,0 +1,72 @@
+<main>
+    <app-navbar [title]=this.headerTitle [buttonImgUrl]=this.headerButtonImg (buttonFunction)="MovieLocalStorage()" />
+    <div class="container">
+        <div class="img-group image-overlay">
+            <img class="background-image" src="https://image.tmdb.org/t/p/original/{{movie?.backdrop_path}}"
+                width="100%" alt="backdrop-img">
+            <img class="foreground-image" src="https://image.tmdb.org/t/p/original/{{movie?.poster_path}}" width="50%"
+                alt="poster-img">
+            <h5 class="movie-title pt-3">{{movie?.original_title}} ({{movie?.title}})</h5>
+        </div>
+        <div class="movie-infos d-flex flex-row justify-content-center p-4">
+            <div class="d-flex align-items-center pe-5">
+                <img class="detail-icon" src="../../../assets/CalendarBlank.svg" alt="calender-icon">
+                {{movie?.release_date.slice(0,4)}}
+            </div>
+
+            <div class="d-flex align-items-center pe-5">
+                <img class="detail-icon" src="../../../assets/Clock.svg" alt="clock-icon">
+                {{movie?.runtime +" min" }}
+            </div>
+
+            <div class="d-flex align-items-center">
+                <img class="detail-icon" src="../../../assets/Ticket.svg" alt="ticket-icon">
+                {{movie?.genres[0].name}}
+            </div>
+        </div>
+        <div class="row infotab">
+            <div class="container d-flex">
+                <div (click)="setTab('About Movie')"
+                    class="detail-menu-item tab me-5 ms-4">About
+                    Movie</div>
+                <div [class.active-tab]="isTabActive('Reviews')" (click)="setTab('Reviews')"
+                    class="detail-menu-item tab me-5">Reviews
+                </div>
+                <div [class.active-tab]="isTabActive('Cast')" (click)="setTab('Cast')"
+                    class="detail-menu-item tab me-5">Cast</div>
+            </div>
+
+            <div class="content container mb-5 pb-5">
+                <div class="about" *ngIf="isTabActive('About Movie')" [style.display]="'flex'">{{movie?.overview}}</div>
+                <div class="reviews d-flex flex-column" *ngIf="isTabActive('Reviews')">
+                    <div *ngFor="let review of reviews">
+                        <div class="review-content container d-flex">
+                            <div class="review-profile pt-0">
+                                <img class="user-profile rounded-circle" src="../../../assets/profile.png"
+                                    alt="user-profile">
+                                <p>{{ review.author_details.rating }}</p>
+                            </div>
+                            <div class="comment ps-3">
+                                <h6>{{ review.author }}</h6>
+                                <p>{{ review.content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="isTabActive('Cast')">
+                    <div class="cast container">
+                        <div class="row">
+                            <div class="movie-artist col-6 mb-3 justify-content-center align-items-center"
+                                *ngFor="let cast of cast">
+                                <img class="cast-profile"
+                                    src="https://image.tmdb.org/t/p/original/{{cast.profile_path}}"
+                                    alt="artist-profile">
+                                <h5 class="cast-name">{{ cast.original_name }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

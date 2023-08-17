@@ -1,3 +1,9 @@
-<div class="one d-flex justify-content-center fixed-top border-bottom">
-    <div>sayfa ismi</div>
+<div class="header d-flex justify-content-between fixed-top border-bottom">
+    <div (click)="goBack()">
+        <img src="../../../assets/arrow-left.svg" alt="leftarrow">
+    </div>
+    <div>{{title}}</div>
+    <div class="save-icon" (click)="this.buttonFunction.emit()">
+        <img *ngIf="this.buttonImgUrl" src={{this.buttonImgUrl}} alt="icon">
+    </div>
 </div>

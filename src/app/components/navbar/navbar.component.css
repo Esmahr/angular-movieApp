@@ -1,5 +1,9 @@
-.one{
+.header{
     background-color: #242A32;
     padding: 1rem;
     color: #fff;
+}
+
+.save-icon{
+    cursor: pointer;
 }

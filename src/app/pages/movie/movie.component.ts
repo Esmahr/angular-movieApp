@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieApiService } from '../service/movie-api.service';
+import { MovieApiService } from '../../service/movie-api.service';
 
 @Component({
   selector: 'app-movie',
@@ -11,6 +11,8 @@ export class MovieComponent implements OnInit {
   upcomingMoviesDisplay: any[] = []
   topMoviesDisplay: any[] = []
   popularMoviesDisplay: any[] = []
+
+  headerTitle: string = "Home"
 
   sliderTransform: number = 0;
 

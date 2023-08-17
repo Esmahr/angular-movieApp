@@ -10,10 +10,6 @@ main {
     overflow: hidden;
 }
 
-.container .image-overlay {
-    position: relative;
-}
-
 .background-image {
     width: 100%;
     border-radius: 0rem 0rem 1rem 1rem;
@@ -30,22 +26,17 @@ main {
     left: 20px;
 }
 
-.tab {
+.detail-menu-item {
     font-size: 0.875rem;
-    border-bottom: 2px solid transparent;
 }
 
-.tab:hover {
+.detail-menu-item:hover {
     cursor: pointer;
+    font-weight: bold;
 }
 
-.active-tab {
+.active-detail-menu-item {
     border-bottom: 5px solid #3A3F47;
-}
-
-
-.is-show {
-    display: flex;
 }
 
 .infotab .content {
@@ -60,22 +51,22 @@ main {
     color: #92929D;
 }
 
-.movie-infos img {
+.movie-infos .detail-icon{
     padding-right: .5rem;
 }
 
-.image-overlay h5 {
+.img-group .movie-title {
     font-size: 1.125rem;
     margin-left: 8rem;
 }
 
-.profile img {
+.review-profile .user-profile{
     width: 2.75rem;
     height: 2.75rem;
     padding-bottom: .5rem;
 }
 
-.profile {
+.review-profile {
     text-align: center;
     color: #0296E5;
 }
@@ -86,17 +77,17 @@ main {
     margin-bottom: 2rem;
 }
 
-.col-6{
+.movie-artist{
     text-align: center;
 }
-.col-6 img {
+.movie-artist .cast-profile {
     width: 6.25rem;
     height: 6.25rem;
     border-radius: 6.25rem;
     margin-bottom: .5rem;
 }
 
-.col-6 h5{
+.movie-artist .cast-name{
     font-size: 0.75rem;
     font-weight: 500;
 }

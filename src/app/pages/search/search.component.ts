@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
-import { SearchService } from './search.service';
 import { MovieApiService } from '../../service/movie-api.service'
 
 @Component({
@@ -8,14 +7,16 @@ import { MovieApiService } from '../../service/movie-api.service'
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit  {
-  constructor(private myDataService: SearchService,private service:MovieApiService) { }
+export class SearchComponent implements OnInit {
+
+  constructor(private service: MovieApiService) { }
+  headerTitle : string = "Search";
   searchMovie: any;
   query: any;
   searchFilter(e: any) {
     this.query = e.target.value
 
-    this.myDataService
+    this.service
       .getSearch(this.query)
       .pipe(take(1))
       .subscribe((data: any) => {

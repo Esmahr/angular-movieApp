@@ -5,12 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SliderComponent } from './components/slider/slider.component';
-import { DetailComponent } from './components/detail/detail.component';
+import { DetailComponent } from './pages/detail/detail.component';
 import { MovieApiService } from './service/movie-api.service';
-import { SearchComponent } from './components/search/search.component';
+import { SearchComponent } from './pages/search/search.component';
 import { LoadingComponent } from './components/loading/loading.component';
-import { MovieComponent } from './movie/movie.component';
-import { FooterComponent } from './components/footer/footer.component'
+import { MovieComponent } from './pages/movie/movie.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { WatchlistComponent } from './pages/watchlist/watchlist.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component'
     SearchComponent,
     LoadingComponent,
     MovieComponent,
-    FooterComponent
+    FooterComponent,
+    WatchlistComponent
   ],
   imports: [
     BrowserModule,

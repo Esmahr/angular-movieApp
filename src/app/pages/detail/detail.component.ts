@@ -15,6 +15,9 @@ export class DetailComponent implements OnInit {
   reviews: any[] = [];
   cast: any[] = [];
 
+  headerTitle: string = "Details"
+  headerButtonImg: string = "../../../assets/Save.svg"
+
   tabs: string[] = ["About Movie", "Reviews", "Cast"]
   currentTab: string = "About Movie";
 
@@ -24,6 +27,10 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => this.movieId = params["id"]);
+    this.savedMovies = JSON.parse(localStorage.getItem("movies") || "[]");
+
+    if (this.savedMovies.includes(this.movieId)) { this.headerButtonImg = "../../../assets/images/Save.svg" };
+
     this.getDetails(this.movieId);
     this.getReview(this.movieId);
     this.getCast(this.movieId);
@@ -49,5 +56,15 @@ export class DetailComponent implements OnInit {
     this.currentTab = tab;
   }
 
+  MovieLocalStorage(): void {
+    if (this.savedMovies.includes(this.movieId)) {
+      this.savedMovies = this.savedMovies.filter(movieId => movieId !== this.movieId);
+      this.headerButtonImg = "../../../assets/Save.svg"
+    } else {
+      this.savedMovies.push(this.movieId);
+      this.headerButtonImg = "../../../assets/Vector.svg"
 
+    }
+    localStorage.setItem('movies', JSON.stringify(this.savedMovies));
+  }
 }

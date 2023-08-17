@@ -1,11 +1,11 @@
-.footer{
+.footer {
     padding: 1rem;
     text-align: center;
     background-color: #242A32;
     color: #67686D;
 }
 
-.footer .col-4 a{
+a {
     text-decoration: none;
     color: #67686D;
 }

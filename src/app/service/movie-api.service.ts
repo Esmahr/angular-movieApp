@@ -52,4 +52,8 @@ export class MovieApiService {
     return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=f86778ad848bc5db81f8a27d73a1532b`)
   }
 
+  getSearch(query: string): Observable<any> {
+    return this.http.get('https://api.themoviedb.org/3/search/movie?api_key=f86778ad848bc5db81f8a27d73a1532b&query=' + query)
+  }
+
 }

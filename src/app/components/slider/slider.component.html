@@ -1,9 +1,9 @@
 <div class="slider pt-5">
-    <ul class="list-style-none d-flex mb-2">
-        <li class="col-3" *ngFor="let movie of popularMoviesDisplay.slice(0,10)">
-            <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="card-img-top img" alt="...">
-            <div class="card-body text-light">
-            </div>
+    <ul class="slider-horizontal list-style-none d-flex mb-2">
+        <li class="slider-item col-3" *ngFor="let movie of popularMoviesDisplay.slice(0,10)">
+            <a href="details/{{movie.id}}" class="d-flex">
+                <img class="movie-poster" src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="movie-poster">
+            </a>
         </li>
     </ul>
 </div>

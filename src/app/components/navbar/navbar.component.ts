@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { take } from 'rxjs';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
 
-  constructor() { }
+  @Input() title : string = "";
+  @Input() buttonImgUrl : string = "";
+  @Output() buttonFunction = new EventEmitter();
 
-  ngOnInit(): void {
+  constructor(private location: Location){}
+
+  goBack(){ 
+    this.location.back();
   }
 }

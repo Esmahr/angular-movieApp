@@ -11,8 +11,7 @@ main img {
     padding-bottom: 5rem;
 }
 
-
-.nav {
+.movie-categories {
     border: none;
 }
 
@@ -24,11 +23,11 @@ main img {
     background-color: transparent;
 }
 
-.nav-tabs .nav-link {
+.nav-tabs .item-button {
     border: none;
 }
 
-.nav-tabs .nav-link.active {
+.nav-tabs .item-button.active {
     border: none;
     font-weight: bold;
     border-bottom: 2px solid #fff;
@@ -43,12 +42,12 @@ main img {
 
 }
 
-.tab-pane .row .col-4 img {
+.col-4 img {
     height: 150;
     width: 100%;
 }
 
-.tab-pane .row .col-4 a{
+.col-4 a{
     text-decoration: none;
     color: #fff;
     text-align: center;

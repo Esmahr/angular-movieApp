@@ -1,29 +1,20 @@
 
-.slider .list-style-none {
+.slider .slider-horizontal {
     width: 100% !important;
     overflow: hidden;
-}
-
-ul.list-style-none {
-    overflow-x: auto;
-    overflow: hidden;
-    width: 1750px;
     list-style: none;
 }
 
-.list-style-none .col-3 {
-    position: relative;
-    width: 100px;
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.list-style-none .col-3 .img {
+.movie-poster {
     border-radius: 10px;
     width: 90%;
 }
 
-.list-style-none .col-3 {
+.slider-horizontal .slider-item{
+    position: relative;
+    width: 100px;
+    text-align: center;
+    padding-top: 2rem;
     animation: moveOne 80s linear infinite;
     height: 200px;
 }
