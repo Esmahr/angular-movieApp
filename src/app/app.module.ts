@@ -11,7 +11,9 @@ import { SearchComponent } from './pages/search/search.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { MovieComponent } from './pages/movie/movie.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { WatchlistComponent } from './pages/watchlist/watchlist.component'
+import { WatchlistComponent } from './pages/watchlist/watchlist.component';
+import { TabContentComponent } from './components/tab-content/tab-content.component';
+import { TabItemComponent } from './components/tab-item/tab-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { WatchlistComponent } from './pages/watchlist/watchlist.component'
     LoadingComponent,
     MovieComponent,
     FooterComponent,
-    WatchlistComponent
+    WatchlistComponent,
+    TabContentComponent,
+    TabItemComponent
   ],
   imports: [
     BrowserModule,

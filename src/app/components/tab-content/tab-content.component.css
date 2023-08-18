@@ -1,0 +1,11 @@
+img {
+    height: 150;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}

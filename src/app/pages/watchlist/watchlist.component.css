@@ -5,12 +5,7 @@ main {
     padding-bottom: 5rem;
 }
 
-.container{
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-}
-
-.detail img{
+.movie-detail img{
     padding-right: 5px;
 }
 

@@ -1,6 +1,6 @@
 <main>
     <app-navbar [title]=this.headerTitle></app-navbar>
-    <div class="container d-flex" *ngFor="let movie of movieDetails">
+    <div class="container pe-5 pb-5 d-flex" *ngFor="let movie of movieDetails">
         <a href="details/{{movie.id}}" class="d-flex">
             <div class="image pe-3"><img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" width="120"
                     alt=""></div>
@@ -9,10 +9,10 @@
                     <li class="detail-title mt-1">
                         <h5>{{movie.original_title}}</h5>
                     </li>
-                    <li class="detail"><img src="../../../assets/Star.svg">{{movie.vote_average}}</li>
-                    <li class="detail"><img src="../../../assets/Ticket.svg">{{movie?.genres[0].name}}</li>
-                    <li class="detail"><img src="../../../assets/CalendarBlank.svg">{{movie.release_date}}</li>
-                    <li class="detail"><img src="../../../assets/Clock.svg">{{movie.vote_count}} min</li>
+                    <li class="movie-detail"><img src="../../../assets/Star.svg">{{movie.vote_average}}</li>
+                    <li class="movie-detail"><img src="../../../assets/Ticket.svg">{{movie?.genres[0].name}}</li>
+                    <li class="movie-detail"><img src="../../../assets/CalendarBlank.svg">{{movie.release_date}}</li>
+                    <li class="movie-detail"><img src="../../../assets/Clock.svg">{{movie.vote_count}} min</li>
                 </ul>
             </div>
         </a>

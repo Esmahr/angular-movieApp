@@ -4,26 +4,24 @@
         <div class="input-group mb-3 pt-5">
             <input type="text" class="form-control" placeholder="Search" aria-label="Search"
                 aria-describedby="button-addon2" (change)="searchFilter($event)">
-            <button class="btn" type="button" id="button-addon2"><img src="../../../assets/Search.svg"></button>
+            <button class="search-button btn" type="button" id="button-addon2"><img src="../../../assets/Search.svg"></button>
         </div>
         <div class="pb-5" *ngIf="searchMovie != null">
             <div class="row mb-4" *ngFor="let movie of searchMovie">
-               <div class="col-1"></div>
                <a href="details/{{movie.id}}" class="d-flex">
                 <div class="col-4"><img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}"></div>
-                <div class="col-7 ps-0">
+                <div class="col-8 ps-0">
                     <ul class="list-unstyled ps-0 pt-1">
-                        <li class="wh"><h5>{{movie.original_title}}</h5></li>
-                        <li class="or"><img class="pb-1 pe-2" src="../../../assets/Star.svg">{{movie.vote_average}}</li>
-                        <li class="wh"><img class="pb-1 pe-2" src="../../../assets/CalendarBlank.svg">{{movie.release_date}}</li>
-                        <li class="wh"><img class="pb-1 pe-2" src="../../../assets/Clock.svg">{{movie.vote_count}} min</li>
+                        <li class="detail-info"><h5>{{movie.original_title}}</h5></li>
+                        <li class="detail-info"><img class="pb-1 pe-2" src="../../../assets/Star.svg">{{movie.vote_average}}</li>
+                        <li class="detail-info"><img class="pb-1 pe-2" src="../../../assets/CalendarBlank.svg">{{movie.release_date}}</li>
+                        <li class="detail-info"><img class="pb-1 pe-2" src="../../../assets/Clock.svg">{{movie.vote_count}} min</li>
                     </ul>
                 </div></a>
             </div>
         </div>
-        <div class="newsNotFound" *ngIf="searchMovie.length == 0">
-
-            <img src="../../../assets/no-results.svg" alt="">
+        <div class="moviesNotFound text-center" *ngIf="searchMovie.length == 0">
+            <img src="../../../assets/no-results.svg" alt="movieNotFound">
             <h4>we are sorry, we can <br>not find the movie :(</h4>
             <p>Find your movie by Type title,<br> categories, years, etc </p>
         </div>

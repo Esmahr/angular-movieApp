@@ -4,9 +4,8 @@ main {
 }
 
 
-.form-control {
+.form-control, .search-button {
     border: none;
-    border-radius: .7rem;
     background-color: #3A3F47;
     color: #fff;
 }
@@ -15,37 +14,16 @@ main {
     color: #67686D;
 }
 
-button {
-    background-color: #3A3F47;
-    border: none;
-    border-radius: .7rem;
-}
-
-.wh,
-.or {
+.detail-info {
     font-size: 14px;
     margin-bottom: 5px;
-}
-
-.wh {
     color: #fff;
-}
-
-.or {
-    color: #FF8700;
 }
 
 .col-4 img {
     padding-bottom: 2px;
     padding-right: 5px;
-    border-radius: 1rem;
     width: 100%;
-}
-
-.newsNotFound {
-    text-align: center;
-    margin-top: 5rem;
-    padding-bottom: 31rem;
 }
 
 h4 {
@@ -55,25 +33,12 @@ h4 {
     letter-spacing: 0.0075rem;
     text-transform: capitalize;
     color: #EBEBEF;
-    padding-top: 1rem;
 }
 
 p {
     color: #92929D;
 }
 
-a{
+a {
     text-decoration: none;
-}
-
-
-@media (min-width: 600px) {
-    .col-4 {
-        text-align: end;
-    }
-
-    .col-4 img {
-        width: 50%;
-    }
-
 }

@@ -1,0 +1,10 @@
+.item-button {
+    border: none;
+    font-weight: bold;
+}
+
+.movie-categories-item button {
+    color: #fff;
+    padding-left: 0;
+    background-color: transparent;
+}
